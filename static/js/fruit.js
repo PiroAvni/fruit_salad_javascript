@@ -24,8 +24,7 @@ function addFruit(fruit) {
 
   li.addEventListener("click", removeFruit, { once: true }); // once use, event listener will be removed
   fruitList.appendChild(li);
-  // displayTotalCalories(fruit);
-  
+ 
   cal += fruit.nutritions.calories;
 
   if (cal) {
@@ -36,10 +35,10 @@ function addFruit(fruit) {
     const choice = confirm("Are you sure?");
     choice ? e.target.remove() : "";
  
-    //totalCalories -= fruit.nutritions.calories;
+    
     cal -= fruit.nutritions.calories;
     fruitNutrition.textContent = `${cal} calories`;
-    //fruitNutrition.textContent = `${totalCalories} calories`;
+   
   }
 }
 
